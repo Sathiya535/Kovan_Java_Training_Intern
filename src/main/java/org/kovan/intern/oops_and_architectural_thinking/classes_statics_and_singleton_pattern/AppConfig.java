@@ -16,6 +16,7 @@ public class AppConfig {
         return instance;
     }
 
+
     public void showConfig() {
         System.out.println("App configuration loaded");
     }
