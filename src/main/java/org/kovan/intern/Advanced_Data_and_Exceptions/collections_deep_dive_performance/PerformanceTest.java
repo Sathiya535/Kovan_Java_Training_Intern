@@ -10,11 +10,11 @@ public class PerformanceTest {
             arrayList.add(i);
         }
         long startTime =System.nanoTime();
-        arrayList.get(midValue);
+        int a = arrayList.get(midValue);
         long endTime=System.nanoTime();
         System.out.println("ArrayList");
         System.out.println("Start Time "+startTime);
-        System.out.println("Value "+arrayList.get(midValue));
+        System.out.println("Value "+a);
         System.out.println( "End Time "+endTime);
         long arrayListDiff=endTime-startTime;
         System.out.println("Total nanosec of ArrayList "+arrayListDiff);

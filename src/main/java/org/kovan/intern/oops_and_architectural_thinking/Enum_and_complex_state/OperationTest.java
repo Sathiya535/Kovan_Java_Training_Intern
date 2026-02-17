@@ -7,6 +7,7 @@ enum Operation {
         public double apply(double x, double y) {
             return x + y;
         }
+
     },
 
     SUBTRACT {
