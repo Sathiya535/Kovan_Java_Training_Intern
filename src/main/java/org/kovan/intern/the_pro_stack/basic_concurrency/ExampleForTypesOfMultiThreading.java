@@ -3,7 +3,7 @@ package org.kovan.intern.the_pro_stack.basic_concurrency;
 class Keyboard extends Thread{
     public void run(){
         System.out.println("Keyboard class is running....");
-        for(int i=1;i<=5;i++){
+        for(;;){
             System.out.println("KeyBoard...");
             try {
                 Thread.sleep(2000);
@@ -11,7 +11,7 @@ class Keyboard extends Thread{
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("Keyboard program ended...");
+        //System.out.println("Keyboard program ended...");
     }
 
 }
