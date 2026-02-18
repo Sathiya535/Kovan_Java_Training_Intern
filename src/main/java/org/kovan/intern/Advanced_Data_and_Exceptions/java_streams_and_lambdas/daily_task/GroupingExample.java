@@ -1,4 +1,4 @@
-package org.kovan.intern.Advanced_Data_and_Exceptions.java_streams_and_lambdas;
+package org.kovan.intern.Advanced_Data_and_Exceptions.java_streams_and_lambdas.daily_task;
 import java.util.*;
 import java.util.stream.*;
 
