@@ -2,7 +2,7 @@ package org.kovan.intern.Advanced_Data_and_Exceptions.exception_handling_pattern
 
 import java.io.*;
 
-// Step 1: Custom Runtime Exception
+// Custom Runtime Exception
 class DataProcessingException extends RuntimeException {
 
     public DataProcessingException(String message, Throwable cause) {
@@ -10,7 +10,7 @@ class DataProcessingException extends RuntimeException {
     }
 }
 
-// Step 2: Service class
+//  Service class
 class FileService {
 
     public void processFile() {
@@ -34,7 +34,7 @@ class FileService {
     }
 }
 
-// Step 3: Main class
+// Main class
 public class RethrowDemo {
 
     public static void main(String[] args) {
