@@ -14,5 +14,18 @@ public class LazyExample {
                     System.out.println("Filtering: " + n);
                     return n > 10;
                 });
+
+
+        //.count();
+
+
+//                 .count()
+//
+//                .collect()
+//
+//                .forEach()
+//
+//                .findFirst()
+
     }
 }

@@ -1,6 +1,6 @@
 package org.kovan.intern.Advanced_Data_and_Exceptions.file_io_and_serialization.code_serializable;
 
-import org.kovan.intern.Advanced_Data_and_Exceptions.file_io_and_serialization.practices.FileInputStreams;
+
 
 import java.io.*;
 
@@ -14,7 +14,7 @@ public class SerializationDemo {
         System.out.println(obj1.i);
 
         File f=new File("sample.ser");
-        System.out.println(f.getAbsolutePath());
+        //System.out.println(f.getAbsolutePath());
         FileOutputStream fos=new FileOutputStream(f);
         ObjectOutputStream oos=new ObjectOutputStream(fos);
         oos.writeObject(obj1);

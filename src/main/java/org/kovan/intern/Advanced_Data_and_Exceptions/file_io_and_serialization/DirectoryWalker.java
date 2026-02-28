@@ -8,6 +8,7 @@ public class DirectoryWalker {
 
 
         String folderPath = "C:\\Users\\Sathiya Priya S\\Documents";
+        //String a = "C:\\Users\\SATHIYA PRIYA S\\Documents";
        // String fp="search-ms:displayname=Search%20Results%20in%20Home&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\\Java_Training_Kovan";
         File folder = new File(folderPath);
         //File folder = new File(fp);

@@ -37,7 +37,7 @@ class Employee {
     }
 
     // toString() for printing
-    @Override
+
     public String toString() {
         return name + " (" + salary + ")";
     }
@@ -51,10 +51,10 @@ public class GroupingExample {
         List<Employee> employees = Arrays.asList(
                 new Employee("Lala", Department.IT, 60000),
                 new Employee("Priya", Department.HR, 50000),
-                new Employee("Arun", Department.IT, 75000),
-                new Employee("Kumar", Department.SALES, 45000),
-                new Employee("Divya", Department.HR, 55000),
-                new Employee("Sathish", Department.SALES, 48000)
+                new Employee("Sathiya", Department.IT, 75000),
+                new Employee("Harshini", Department.SALES, 45000),
+                new Employee("Arjunnn", Department.HR, 55000),
+                new Employee("Prathish", Department.SALES, 48000)
         );
 
         // Grouping by Department

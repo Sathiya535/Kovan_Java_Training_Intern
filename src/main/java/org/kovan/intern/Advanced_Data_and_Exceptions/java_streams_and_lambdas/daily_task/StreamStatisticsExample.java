@@ -10,12 +10,12 @@ public class StreamStatisticsExample {
         // Generate 100 random integers
         List<Integer> numbers = new Random()
                 .ints(100, 1, 1000)   // 100 numbers between 1 and 1000
-                .boxed()
+                .boxed()//int → Integer ......Because List stores objects, not primitive
                 .collect(Collectors.toList());
 
         // Single pass statistics
         IntSummaryStatistics stats = numbers.stream()
-                .mapToInt(Integer::intValue)
+                .mapToInt(Integer::intValue)//Integer → primitive int
                 .summaryStatistics();
 
         System.out.println("Max: " + stats.getMax());

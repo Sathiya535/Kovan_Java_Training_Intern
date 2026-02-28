@@ -1,4 +1,5 @@
 package org.kovan.intern.Advanced_Data_and_Exceptions.file_io_and_serialization;
+import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ abstract class Characters implements Serializable {
     String name;
     int strength;
     int health;
-    // Random random = new Random();
+
     Characters(String name, int health, int strength){
         this.name=name;
         this.health=health;
@@ -63,28 +64,6 @@ class Mage extends Characters {
         opponent.takeDamage(damage);
     }
 }
-
-//class Rogue extends Characters {
-//
-//    Rogue(String name) {
-//        super(name, 100, 25);
-//    }
-//
-//    @Override
-//    public void attack(Characters opponent) {
-//        int damage = strength+(20);
-//        System.out.println(name + "attacks the "+opponent);
-//        opponent.takeDamage(damage);
-//    }
-//
-//    public void takeDamage(int damage){
-//        if((100)<30){
-//            System.out.println("Dodge the Attacked");
-//        }else{
-//            super.takeDamage(damage);
-//        }
-//    }
-//}
 
 class Arena{
     public static void fight(Characters character1, Characters character2) {

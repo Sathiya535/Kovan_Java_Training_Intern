@@ -3,7 +3,7 @@ package org.kovan.intern.the_pro_stack.basic_concurrency;
 class UserThreads extends Thread{
     public void run(){
         System.out.println("User Threads executing....");
-      //  for(int i=0;i<=5;i++){
+      //  for(;;){
         for(int i=0;i<=5;i++){
             System.out.println("User Thread Iteration working.....");
             try {

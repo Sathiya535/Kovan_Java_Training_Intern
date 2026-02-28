@@ -9,8 +9,8 @@ public class MultiThreadLifeCycle {
             System.out.println("Main Thread Executing...");
             Thread.sleep(3000);
             System.out.println("Main Thread Executing...");
-            // for interuput (kill the thread)
-            // Thread.currentThread().interrupt();
+            //for interuput (kill the thread)
+           // Thread.currentThread().interrupt();
             Thread.sleep(3000);
             System.out.println("Main Thread Executing...");
         }
