@@ -26,6 +26,7 @@ public class BankSimulation {
             t.start();
         }
 
+
         // Wait for all threads to finish
         for (Thread t : threads) {
             t.join();

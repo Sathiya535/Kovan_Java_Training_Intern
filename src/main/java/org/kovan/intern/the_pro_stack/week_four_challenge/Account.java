@@ -6,7 +6,8 @@ public class Account {
 
     private final int id;
     private int balance;
-    private final ReentrantLock lock = new ReentrantLock();
+    //Only ONE thread can enter critical section at a time.
+    private final ReentrantLock lock = new ReentrantLock();//It is used for manual locking in multithreading.and more powerful than sync
 
     public Account(int id, int balance) {
         this.id = id;

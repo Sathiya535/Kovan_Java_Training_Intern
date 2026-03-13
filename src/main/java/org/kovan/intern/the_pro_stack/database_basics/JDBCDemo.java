@@ -1,21 +1,29 @@
 package org.kovan.intern.the_pro_stack.database_basics;
 
 import java.sql.*;
+import java.util.Scanner;
 
 public class JDBCDemo {
 
     public static void main(String[] args) {
+//Store file in current folder
+        String url = "jdbc:h2:./testdb";
 
-        String url = "jdbc:h2:./testdb";  // local database file
-        String username = "sa"; //sa->System Administrator ->default username for H2 database.
+        //Default for H2:
+        //
+        //Username = sa
+        //
+        //Password = empty
+        String username = "sa";
         String password = "";
-
+//Creates physical connection to database.
         try (Connection connection =
-                     DriverManager.getConnection(url, username, password)) {
+                     DriverManager.getConnection(url, username, password);
+             Scanner scanner = new Scanner(System.in)) {
 
             System.out.println("Connected to database!");
 
-            //   Create Table
+            // Create Table
             String createTableSQL = """
                     CREATE TABLE IF NOT EXISTS Users (
                         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,25 +31,32 @@ public class JDBCDemo {
                         email VARCHAR(100)
                     )
                     """;
-
+//Executes normal SQL queries
             Statement statement = connection.createStatement();
             statement.execute(createTableSQL);
-            System.out.println("Table created!");
+            System.out.println("Table ready!");
 
-            //2. Insert User (Using PreparedStatement)
+            //
+            System.out.print("Enter Name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter Email: ");
+            String email = scanner.nextLine();
+
+            //
             String insertSQL =
                     "INSERT INTO Users (name, email) VALUES (?, ?)";
-
+//Executes parameterized SQL safely.
             PreparedStatement ps =
                     connection.prepareStatement(insertSQL);
 
-            ps.setString(1, "Sathiya");
-            ps.setString(2, "sathiya@email.com");
+            ps.setString(1, name);
+            ps.setString(2, email);
 
             ps.executeUpdate();
             System.out.println("User inserted!");
 
-            //3. Select Users
+            //Fetch data from table.
             String selectSQL = "SELECT * FROM Users";
             ResultSet rs = statement.executeQuery(selectSQL);
 

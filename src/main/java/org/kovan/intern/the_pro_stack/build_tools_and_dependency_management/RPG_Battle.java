@@ -17,11 +17,13 @@ public class RPG_Battle {
                 player1.health,
                 player1.strength
         );
+       // Java objects to JSON(Serialization)
+        //convert JSON back to Java objects(Deserialization)
 
         Gson gson = new Gson();
         String json = gson.toJson(save);
 
-        System.out.println("\nJSON Output:");
+        System.out.println("JSON Output:");
         System.out.println(json);
     }
 }
